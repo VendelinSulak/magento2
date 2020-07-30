@@ -68,3 +68,6 @@ atlassian*
 
 .github
 .editorconfig
+
+.ddev
+!.ddev/config.yaml
