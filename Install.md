@@ -12,3 +12,7 @@
     1. `php bin/magento setup:store-config:set --base-url="<your-url>"`
     2. `php bin/magento setup:store-config:set --base-url-secure="<your-url>"`
     3. `php bin/magento cache:flush`
+
+
+## Create admin user
+Command: `php bin/magento admin:user:create`
