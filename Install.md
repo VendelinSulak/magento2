@@ -16,3 +16,29 @@
 
 ## Create admin user
 Command: `php bin/magento admin:user:create`
+
+## Reset authenticator per account
+Command: `php bin/magento security:tfa:reset <user> <provider>`
+
+##Products are not showing in category
+Check below list 
+
+1.General->Status = Enabled
+
+2.general->Visibility = Catalog,Search
+
+3.Inventory->Qty > 0
+
+4.Inventory->Stock Availability = In Stock
+
+5.Websites = checking your site
+
+6.Catgories = checking your category.
+
+Then:
+
+Command: `php bin/magento setup:static-content:deploy`
+
+Command: `php bin/magento indexer:reindex`
+
+Clear cache and try again.

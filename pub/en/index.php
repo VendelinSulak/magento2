@@ -9,9 +9,8 @@
 use Magento\Framework\App\Bootstrap;
 use Magento\Framework\App\Filesystem\DirectoryList;
 
-
 try {
-    require __DIR__ . '/../app/bootstrap.php';
+    require __DIR__ . '/../../app/bootstrap.php';
 } catch (\Exception $e) {
     echo <<<HTML
 <div style="font:12px/1.35em arial, helvetica, sans-serif;">
@@ -35,7 +34,6 @@ $params[Bootstrap::INIT_PARAM_FILESYSTEM_DIR_PATHS] = array_replace_recursive(
         DirectoryList::UPLOAD => [DirectoryList::URL_PATH => 'media/upload'],
     ]
 );
-
 switch ($_SERVER['HTTP_HOST']) {
     case 'tea.ddev.site':
         $params[\Magento\Store\Model\StoreManager::PARAM_RUN_CODE] = 'tea';
