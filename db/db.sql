@@ -133,7 +133,7 @@ CREATE TABLE `admin_user` (
 
 LOCK TABLES `admin_user` WRITE;
 /*!40000 ALTER TABLE `admin_user` DISABLE KEYS */;
-INSERT INTO `admin_user` VALUES (1,'admin','admin','admin@admin.com','admin','ce5a2d1fce836d5bc81ec6ae642d45ce6c3acd0764e1d49ed895c52403c2a7b8:WD76Cn8pN0lyCVft:2','2020-07-29 16:20:06','2020-08-13 07:15:56','2020-08-13 07:15:56',2,0,1,NULL,NULL,NULL,'en_US',0,NULL,NULL,NULL),(2,'Vendelin','Sulak','vendelin@digitalwerk.agency','dw-admin','1e201245c45a6195cd73ce1bb083160ae55aa3d3204d137377af0f23898991d9:t1rl6nfZym0Wj61Y:2','2020-07-29 16:38:06','2020-07-30 14:01:22','2020-07-30 13:59:33',10,0,1,'{\"configState\":{\"catalog_search\":\"1\",\"catalog_seo\":\"1\",\"general_country\":\"1\",\"general_locale\":\"1\",\"general_store_information\":\"1\",\"catalog_fields_masks\":\"0\",\"catalog_frontend\":\"0\",\"catalog_review\":\"0\",\"catalog_productalert\":\"0\",\"catalog_productalert_cron\":\"0\",\"catalog_placeholder\":\"0\",\"catalog_recently_products\":\"0\",\"catalog_product_video\":\"0\",\"catalog_price\":\"0\",\"catalog_layered_navigation\":\"0\",\"catalog_navigation\":\"0\",\"catalog_downloadable\":\"0\",\"catalog_custom_options\":\"0\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL),(3,'admin','admin','admin@admin.admin','admin2','ff998a76cfab528695eff46fecc15d4b17c11807417f9dac6837e8f09ac84586:NoHCtf1JB3jAKLJc:2','2020-08-12 11:45:47','2020-08-13 08:01:07','2020-08-13 07:48:37',9,0,1,'{\"configState\":{\"web_url\":\"1\",\"web_seo\":\"1\",\"web_unsecure\":\"1\",\"web_secure\":\"1\",\"web_default\":\"1\",\"web_cookie\":\"1\",\"web_browser_capabilities\":\"1\",\"general_country\":\"1\",\"general_locale\":\"1\",\"general_store_information\":\"1\",\"web_default_layouts\":\"1\",\"web_session\":\"1\",\"general_single_store_mode\":\"1\",\"catalog_search\":\"1\",\"catalog_seo\":\"0\",\"currency_options\":\"1\",\"admin_url\":\"1\",\"admin_emails\":\"0\",\"admin_startup\":\"0\",\"admin_security\":\"0\",\"admin_dashboard\":\"0\",\"admin_captcha\":\"0\",\"admin_usage\":\"0\",\"dev_translate_inline\":\"0\",\"dev_js\":\"0\",\"dev_css\":\"0\",\"dev_restrict\":\"1\",\"dev_debug\":\"1\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL);
+INSERT INTO `admin_user` VALUES (1,'admin','admin','admin@admin.com','admin','ce5a2d1fce836d5bc81ec6ae642d45ce6c3acd0764e1d49ed895c52403c2a7b8:WD76Cn8pN0lyCVft:2','2020-07-29 16:20:06','2020-08-13 07:15:56','2020-08-13 07:15:56',2,0,1,NULL,NULL,NULL,'en_US',0,NULL,NULL,NULL),(2,'Vendelin','Sulak','vendelin@digitalwerk.agency','dw-admin','1e201245c45a6195cd73ce1bb083160ae55aa3d3204d137377af0f23898991d9:t1rl6nfZym0Wj61Y:2','2020-07-29 16:38:06','2020-07-30 14:01:22','2020-07-30 13:59:33',10,0,1,'{\"configState\":{\"catalog_search\":\"1\",\"catalog_seo\":\"1\",\"general_country\":\"1\",\"general_locale\":\"1\",\"general_store_information\":\"1\",\"catalog_fields_masks\":\"0\",\"catalog_frontend\":\"0\",\"catalog_review\":\"0\",\"catalog_productalert\":\"0\",\"catalog_productalert_cron\":\"0\",\"catalog_placeholder\":\"0\",\"catalog_recently_products\":\"0\",\"catalog_product_video\":\"0\",\"catalog_price\":\"0\",\"catalog_layered_navigation\":\"0\",\"catalog_navigation\":\"0\",\"catalog_downloadable\":\"0\",\"catalog_custom_options\":\"0\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL),(3,'admin','admin','admin@admin.admin','admin2','ff998a76cfab528695eff46fecc15d4b17c11807417f9dac6837e8f09ac84586:NoHCtf1JB3jAKLJc:2','2020-08-12 11:45:47','2020-08-13 10:14:10','2020-08-13 10:14:10',10,0,1,'{\"configState\":{\"web_url\":\"1\",\"web_seo\":\"1\",\"web_unsecure\":\"1\",\"web_secure\":\"1\",\"web_default\":\"1\",\"web_cookie\":\"1\",\"web_browser_capabilities\":\"1\",\"general_country\":\"1\",\"general_locale\":\"1\",\"general_store_information\":\"1\",\"web_default_layouts\":\"1\",\"web_session\":\"1\",\"general_single_store_mode\":\"1\",\"catalog_search\":\"1\",\"catalog_seo\":\"0\",\"currency_options\":\"1\",\"admin_url\":\"1\",\"admin_emails\":\"0\",\"admin_startup\":\"0\",\"admin_security\":\"0\",\"admin_dashboard\":\"0\",\"admin_captcha\":\"0\",\"admin_usage\":\"0\",\"dev_translate_inline\":\"0\",\"dev_js\":\"0\",\"dev_css\":\"0\",\"dev_restrict\":\"1\",\"dev_debug\":\"1\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `admin_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -180,7 +180,7 @@ CREATE TABLE `admin_user_session` (
   KEY `ADMIN_USER_SESSION_SESSION_ID` (`session_id`),
   KEY `ADMIN_USER_SESSION_USER_ID` (`user_id`),
   CONSTRAINT `ADMIN_USER_SESSION_USER_ID_ADMIN_USER_USER_ID` FOREIGN KEY (`user_id`) REFERENCES `admin_user` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -189,7 +189,7 @@ CREATE TABLE `admin_user_session` (
 
 LOCK TABLES `admin_user_session` WRITE;
 /*!40000 ALTER TABLE `admin_user_session` DISABLE KEYS */;
-INSERT INTO `admin_user_session` VALUES (1,'02e04c9aa4d106802a8e931548c1058d',1,0,'2020-07-29 16:26:34','2020-07-29 16:38:22','172.18.0.6'),(2,'9c160a792194b1504377703a151e5359',2,1,'2020-07-29 16:39:00','2020-07-29 16:42:42','172.18.0.6'),(3,'8fd13483a31c9dd79e316771620cb71d',2,1,'2020-07-30 05:37:15','2020-07-30 06:33:47','172.18.0.6'),(4,'a6af871d26c9447219515d7411b4cf3f',2,1,'2020-07-30 06:51:03','2020-07-30 07:14:59','172.18.0.7'),(5,'1cb7a15d90068651fe05b25006f61b77',2,2,'2020-07-30 07:32:17','2020-07-30 07:40:46','172.18.0.7'),(6,'769aac067390396966b9fc11fd016770',2,0,'2020-07-30 07:40:46','2020-07-30 08:13:13','172.18.0.7'),(7,'a45bb3fa7f2d83be1fd53249fffd0c8c',2,1,'2020-07-30 08:38:37','2020-07-30 08:39:18','172.18.0.7'),(8,'5ed444c205c78fe3bd74775e480b621b',2,1,'2020-07-30 08:54:37','2020-07-30 08:54:37','172.18.0.7'),(9,'66e870c2594e505c4dc3bb0ab2ecb5b8',2,1,'2020-07-30 12:37:13','2020-07-30 12:40:20','172.18.0.6'),(10,'19ce33db090c0d99eee5e049bfd04b6d',2,1,'2020-07-30 13:06:27','2020-07-30 13:33:58','172.18.0.6'),(11,'8067417b107afb804d36c6240670a7a9',2,1,'2020-07-30 13:59:36','2020-07-30 14:20:19','172.18.0.7'),(12,'5f40b6cf18d21d142510397a3033cbfe',3,1,'2020-08-12 11:50:04','2020-08-12 12:12:04','172.18.0.6'),(13,'daa6d313d78ff23a524fd2b865c4c997',3,2,'2020-08-12 12:56:50','2020-08-12 14:17:32','172.18.0.6'),(14,'ae9b1324cafb7d51a28cb63647accdd4',3,1,'2020-08-12 14:17:32','2020-08-12 14:32:20','172.18.0.7'),(15,'c9920c9618387f6f28cee09aaf730082',3,1,'2020-08-13 06:22:05','2020-08-13 06:37:54','172.18.0.7'),(16,'766bf0cf5dadfebbfbcd10ccff9fc319',3,1,'2020-08-13 06:57:29','2020-08-13 07:12:14','172.18.0.7'),(17,'4db8e7ab23514ba5f9882b9f7d1feaaa',1,1,'2020-08-13 07:15:57','2020-08-13 07:22:20','172.18.0.7'),(18,'7f749dbd0dda790c38d3aa245e75f758',3,0,'2020-08-13 07:38:21','2020-08-13 07:40:01','172.18.0.7'),(19,'d7deedcc7494e1aaa94e69c8a46774e4',3,0,'2020-08-13 07:40:06','2020-08-13 07:46:21','172.18.0.7'),(20,'66d9d3aa4097237ff40e3123389108fa',3,0,'2020-08-13 07:46:28','2020-08-13 07:48:19','172.18.0.7'),(21,'3f9ea17d09eb1081385b0348d327c965',3,1,'2020-08-13 07:48:37','2020-08-13 08:55:40','172.18.0.7');
+INSERT INTO `admin_user_session` VALUES (1,'02e04c9aa4d106802a8e931548c1058d',1,0,'2020-07-29 16:26:34','2020-07-29 16:38:22','172.18.0.6'),(2,'9c160a792194b1504377703a151e5359',2,1,'2020-07-29 16:39:00','2020-07-29 16:42:42','172.18.0.6'),(3,'8fd13483a31c9dd79e316771620cb71d',2,1,'2020-07-30 05:37:15','2020-07-30 06:33:47','172.18.0.6'),(4,'a6af871d26c9447219515d7411b4cf3f',2,1,'2020-07-30 06:51:03','2020-07-30 07:14:59','172.18.0.7'),(5,'1cb7a15d90068651fe05b25006f61b77',2,2,'2020-07-30 07:32:17','2020-07-30 07:40:46','172.18.0.7'),(6,'769aac067390396966b9fc11fd016770',2,0,'2020-07-30 07:40:46','2020-07-30 08:13:13','172.18.0.7'),(7,'a45bb3fa7f2d83be1fd53249fffd0c8c',2,1,'2020-07-30 08:38:37','2020-07-30 08:39:18','172.18.0.7'),(8,'5ed444c205c78fe3bd74775e480b621b',2,1,'2020-07-30 08:54:37','2020-07-30 08:54:37','172.18.0.7'),(9,'66e870c2594e505c4dc3bb0ab2ecb5b8',2,1,'2020-07-30 12:37:13','2020-07-30 12:40:20','172.18.0.6'),(10,'19ce33db090c0d99eee5e049bfd04b6d',2,1,'2020-07-30 13:06:27','2020-07-30 13:33:58','172.18.0.6'),(11,'8067417b107afb804d36c6240670a7a9',2,1,'2020-07-30 13:59:36','2020-07-30 14:20:19','172.18.0.7'),(12,'5f40b6cf18d21d142510397a3033cbfe',3,1,'2020-08-12 11:50:04','2020-08-12 12:12:04','172.18.0.6'),(13,'daa6d313d78ff23a524fd2b865c4c997',3,2,'2020-08-12 12:56:50','2020-08-12 14:17:32','172.18.0.6'),(14,'ae9b1324cafb7d51a28cb63647accdd4',3,1,'2020-08-12 14:17:32','2020-08-12 14:32:20','172.18.0.7'),(15,'c9920c9618387f6f28cee09aaf730082',3,1,'2020-08-13 06:22:05','2020-08-13 06:37:54','172.18.0.7'),(16,'766bf0cf5dadfebbfbcd10ccff9fc319',3,1,'2020-08-13 06:57:29','2020-08-13 07:12:14','172.18.0.7'),(17,'4db8e7ab23514ba5f9882b9f7d1feaaa',1,1,'2020-08-13 07:15:57','2020-08-13 07:22:20','172.18.0.7'),(18,'7f749dbd0dda790c38d3aa245e75f758',3,0,'2020-08-13 07:38:21','2020-08-13 07:40:01','172.18.0.7'),(19,'d7deedcc7494e1aaa94e69c8a46774e4',3,0,'2020-08-13 07:40:06','2020-08-13 07:46:21','172.18.0.7'),(20,'66d9d3aa4097237ff40e3123389108fa',3,0,'2020-08-13 07:46:28','2020-08-13 07:48:19','172.18.0.7'),(21,'3f9ea17d09eb1081385b0348d327c965',3,1,'2020-08-13 07:48:37','2020-08-13 08:55:40','172.18.0.7'),(22,'dc2bfbfc0cce52bf45b75338a31583c9',3,1,'2020-08-13 10:14:10','2020-08-13 10:17:02','172.18.0.7');
 /*!40000 ALTER TABLE `admin_user_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -922,7 +922,7 @@ CREATE TABLE `catalog_category_product` (
   KEY `CATALOG_CATEGORY_PRODUCT_PRODUCT_ID` (`product_id`),
   CONSTRAINT `CAT_CTGR_PRD_CTGR_ID_CAT_CTGR_ENTT_ENTT_ID` FOREIGN KEY (`category_id`) REFERENCES `catalog_category_entity` (`entity_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_CTGR_PRD_PRD_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`product_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='Catalog Product To Category Linkage Table';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='Catalog Product To Category Linkage Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -931,7 +931,7 @@ CREATE TABLE `catalog_category_product` (
 
 LOCK TABLES `catalog_category_product` WRITE;
 /*!40000 ALTER TABLE `catalog_category_product` DISABLE KEYS */;
-INSERT INTO `catalog_category_product` VALUES (5,3,6,0),(6,3,5,0),(14,4,6,0),(15,5,6,0),(16,6,10,0),(17,6,11,0),(19,4,10,0),(20,4,11,0);
+INSERT INTO `catalog_category_product` VALUES (5,3,6,0),(6,3,5,0),(14,4,6,0),(15,5,6,0),(16,6,10,0),(17,6,11,0),(19,4,10,0),(20,4,11,0),(21,5,13,0),(22,7,13,0),(23,5,14,0),(24,7,14,0);
 /*!40000 ALTER TABLE `catalog_category_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1008,9 +1008,9 @@ CREATE TABLE `catalog_category_product_index_store1` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `IDX_4B965DC45C352D6E4C9DC0FF50B1FCF5` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_47AB760CD6A893ACEA69A9C2E0112C60` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store1 Replica';
+  KEY `CAT_CTGR_PRD_IDX_STORE1_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_216E521C8AD125E066D2B0BAB4A08412` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store1';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1038,9 +1038,9 @@ CREATE TABLE `catalog_category_product_index_store1_replica` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `CAT_CTGR_PRD_IDX_STORE1_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_216E521C8AD125E066D2B0BAB4A08412` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store1';
+  KEY `IDX_4B965DC45C352D6E4C9DC0FF50B1FCF5` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_47AB760CD6A893ACEA69A9C2E0112C60` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store1 Replica';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1068,9 +1068,9 @@ CREATE TABLE `catalog_category_product_index_store2` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `IDX_87FCED52F67C72BB6992C79EB4DCFA8A` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_15B841C92B67D986A980051DF109F9D1` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store2 Replica';
+  KEY `CAT_CTGR_PRD_IDX_STORE2_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_2AB6FE58F086547FA7E4590837296849` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store2';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1098,9 +1098,9 @@ CREATE TABLE `catalog_category_product_index_store2_replica` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `CAT_CTGR_PRD_IDX_STORE2_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_2AB6FE58F086547FA7E4590837296849` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store2';
+  KEY `IDX_87FCED52F67C72BB6992C79EB4DCFA8A` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_15B841C92B67D986A980051DF109F9D1` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store2 Replica';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1128,9 +1128,9 @@ CREATE TABLE `catalog_category_product_index_store3` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `IDX_43726D149468373EB56B59700A89860C` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_3A62575144A54728FACD3A0D6309E61D` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store3 Replica';
+  KEY `CAT_CTGR_PRD_IDX_STORE3_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_E9342558FA31C65508E1FE75E6242607` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store3';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1139,6 +1139,7 @@ CREATE TABLE `catalog_category_product_index_store3` (
 
 LOCK TABLES `catalog_category_product_index_store3` WRITE;
 /*!40000 ALTER TABLE `catalog_category_product_index_store3` DISABLE KEYS */;
+INSERT INTO `catalog_category_product_index_store3` VALUES (5,13,0,0,3,4),(5,14,0,0,3,4),(7,13,0,1,3,4),(7,14,0,1,3,4);
 /*!40000 ALTER TABLE `catalog_category_product_index_store3` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1157,9 +1158,9 @@ CREATE TABLE `catalog_category_product_index_store3_replica` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `CAT_CTGR_PRD_IDX_STORE3_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_E9342558FA31C65508E1FE75E6242607` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store3';
+  KEY `IDX_43726D149468373EB56B59700A89860C` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_3A62575144A54728FACD3A0D6309E61D` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store3 Replica';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1168,6 +1169,7 @@ CREATE TABLE `catalog_category_product_index_store3_replica` (
 
 LOCK TABLES `catalog_category_product_index_store3_replica` WRITE;
 /*!40000 ALTER TABLE `catalog_category_product_index_store3_replica` DISABLE KEYS */;
+INSERT INTO `catalog_category_product_index_store3_replica` VALUES (5,13,0,0,3,4),(5,14,0,0,3,4),(7,13,0,1,3,4),(7,14,0,1,3,4);
 /*!40000 ALTER TABLE `catalog_category_product_index_store3_replica` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1186,9 +1188,9 @@ CREATE TABLE `catalog_category_product_index_store4` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `IDX_966AADF0F2BFAFFC1235C826759845CC` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_F43ABBF162395BE3A1D5B1AE17C24FE2` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store4 Replica';
+  KEY `CAT_CTGR_PRD_IDX_STORE4_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_ABB606D1CB36CD160DB880F39838BC3F` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store4';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1197,6 +1199,7 @@ CREATE TABLE `catalog_category_product_index_store4` (
 
 LOCK TABLES `catalog_category_product_index_store4` WRITE;
 /*!40000 ALTER TABLE `catalog_category_product_index_store4` DISABLE KEYS */;
+INSERT INTO `catalog_category_product_index_store4` VALUES (5,13,0,0,4,4),(5,14,0,0,4,4),(7,13,0,1,4,4),(7,14,0,1,4,4);
 /*!40000 ALTER TABLE `catalog_category_product_index_store4` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1215,9 +1218,9 @@ CREATE TABLE `catalog_category_product_index_store4_replica` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `CAT_CTGR_PRD_IDX_STORE4_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_ABB606D1CB36CD160DB880F39838BC3F` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store4';
+  KEY `IDX_966AADF0F2BFAFFC1235C826759845CC` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_F43ABBF162395BE3A1D5B1AE17C24FE2` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store4 Replica';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1226,6 +1229,7 @@ CREATE TABLE `catalog_category_product_index_store4_replica` (
 
 LOCK TABLES `catalog_category_product_index_store4_replica` WRITE;
 /*!40000 ALTER TABLE `catalog_category_product_index_store4_replica` DISABLE KEYS */;
+INSERT INTO `catalog_category_product_index_store4_replica` VALUES (5,13,0,0,4,4),(5,14,0,0,4,4),(7,13,0,1,4,4),(7,14,0,1,4,4);
 /*!40000 ALTER TABLE `catalog_category_product_index_store4_replica` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1244,9 +1248,9 @@ CREATE TABLE `catalog_category_product_index_store5` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `IDX_78288F76D618C4C378D1DE1DB362C05F` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_04B1890D19F381013371F9182F62C602` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store5 Replica';
+  KEY `CAT_CTGR_PRD_IDX_STORE5_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_D66B6557126C2DE627A049511C72BE10` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store5';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1274,9 +1278,9 @@ CREATE TABLE `catalog_category_product_index_store5_replica` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `CAT_CTGR_PRD_IDX_STORE5_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_D66B6557126C2DE627A049511C72BE10` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store5';
+  KEY `IDX_78288F76D618C4C378D1DE1DB362C05F` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_04B1890D19F381013371F9182F62C602` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store5 Replica';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1304,9 +1308,9 @@ CREATE TABLE `catalog_category_product_index_store6` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `IDX_60907034DE58E5F1696F31290F80B9B6` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_65189DCB54C58237E1298BDD7727D150` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store6 Replica';
+  KEY `CAT_CTGR_PRD_IDX_STORE6_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_715799A609D876BA8BC3889F4D0D2350` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store6';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1334,9 +1338,9 @@ CREATE TABLE `catalog_category_product_index_store6_replica` (
   `store_id` smallint(5) unsigned NOT NULL DEFAULT 0 COMMENT 'Store Id',
   `visibility` smallint(5) unsigned NOT NULL COMMENT 'Visibility',
   PRIMARY KEY (`category_id`,`product_id`,`store_id`),
-  KEY `CAT_CTGR_PRD_IDX_STORE6_PRD_ID_STORE_ID_CTGR_ID_VISIBILITY` (`product_id`,`store_id`,`category_id`,`visibility`),
-  KEY `IDX_715799A609D876BA8BC3889F4D0D2350` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store6';
+  KEY `IDX_60907034DE58E5F1696F31290F80B9B6` (`product_id`,`store_id`,`category_id`,`visibility`),
+  KEY `IDX_65189DCB54C58237E1298BDD7727D150` (`store_id`,`category_id`,`visibility`,`is_parent`,`position`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Catalog Category Product Index Store6 Replica';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1655,7 +1659,7 @@ CREATE TABLE `catalog_product_entity` (
   PRIMARY KEY (`entity_id`),
   KEY `CATALOG_PRODUCT_ENTITY_ATTRIBUTE_SET_ID` (`attribute_set_id`),
   KEY `CATALOG_PRODUCT_ENTITY_SKU` (`sku`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Table';
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1664,7 +1668,7 @@ CREATE TABLE `catalog_product_entity` (
 
 LOCK TABLES `catalog_product_entity` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity` VALUES (5,4,'simple','Product 1',0,0,'2020-07-30 14:02:56','2020-08-12 14:19:10'),(6,4,'simple','Product 2',0,0,'2020-07-30 14:03:23','2020-08-12 14:23:49'),(10,4,'simple','Green Tea-1',0,0,'2020-08-12 14:27:41','2020-08-13 08:53:31'),(11,4,'simple','Roter Tee',0,0,'2020-08-12 14:27:43','2020-08-13 08:42:21'),(12,4,'configurable','Green Tea',1,1,'2020-08-12 14:27:46','2020-08-12 14:27:46');
+INSERT INTO `catalog_product_entity` VALUES (5,4,'simple','Product 1',0,0,'2020-07-30 14:02:56','2020-08-12 14:19:10'),(6,4,'simple','Product 2',0,0,'2020-07-30 14:03:23','2020-08-12 14:23:49'),(10,4,'simple','Green Tea-1',0,0,'2020-08-12 14:27:41','2020-08-13 08:53:31'),(11,4,'simple','Roter Tee',0,0,'2020-08-12 14:27:43','2020-08-13 08:42:21'),(12,4,'configurable','Green Tea',1,1,'2020-08-12 14:27:46','2020-08-12 14:27:46'),(13,4,'simple','Nescafe',0,0,'2020-08-13 10:15:48','2020-08-13 10:15:48'),(14,4,'simple','Jacobs',0,0,'2020-08-13 10:15:51','2020-08-13 10:16:52');
 /*!40000 ALTER TABLE `catalog_product_entity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1720,7 +1724,7 @@ CREATE TABLE `catalog_product_entity_decimal` (
   CONSTRAINT `CATALOG_PRODUCT_ENTITY_DECIMAL_STORE_ID_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_DEC_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_DEC_ENTT_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Decimal Attribute Backend Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1729,7 +1733,7 @@ CREATE TABLE `catalog_product_entity_decimal` (
 
 LOCK TABLES `catalog_product_entity_decimal` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_decimal` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_decimal` VALUES (9,77,0,5,50.000000),(10,82,0,5,100.000000),(11,77,0,6,50.000000),(12,82,0,6,100.000000),(19,77,0,10,10.000000),(20,82,0,10,100.000000),(21,77,0,11,10.000000),(22,82,0,11,100.000000),(23,82,0,12,100.000000);
+INSERT INTO `catalog_product_entity_decimal` VALUES (9,77,0,5,50.000000),(10,82,0,5,100.000000),(11,77,0,6,50.000000),(12,82,0,6,100.000000),(19,77,0,10,10.000000),(20,82,0,10,100.000000),(21,77,0,11,10.000000),(22,82,0,11,100.000000),(23,82,0,12,100.000000),(24,77,0,13,40.000000),(25,77,0,14,80.000000);
 /*!40000 ALTER TABLE `catalog_product_entity_decimal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1787,7 +1791,7 @@ CREATE TABLE `catalog_product_entity_int` (
   CONSTRAINT `CATALOG_PRODUCT_ENTITY_INT_STORE_ID_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_INT_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_INT_ENTT_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Integer Attribute Backend Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1796,7 +1800,7 @@ CREATE TABLE `catalog_product_entity_int` (
 
 LOCK TABLES `catalog_product_entity_int` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_int` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_int` VALUES (13,97,0,5,1),(14,99,0,5,4),(15,136,0,5,2),(16,97,0,6,1),(17,99,0,6,4),(18,115,0,6,1),(19,136,0,6,2),(29,93,0,10,4),(30,97,0,10,1),(31,99,0,10,4),(32,136,0,10,2),(33,93,0,11,5),(34,97,0,11,1),(35,99,0,11,4),(36,136,0,11,2),(37,97,0,12,1),(38,99,0,12,4),(39,136,0,12,2),(40,97,6,11,1),(41,97,5,11,1),(42,99,5,11,4),(43,136,6,11,2),(44,136,5,11,2),(45,99,6,11,4);
+INSERT INTO `catalog_product_entity_int` VALUES (13,97,0,5,1),(14,99,0,5,4),(15,136,0,5,2),(16,97,0,6,1),(17,99,0,6,4),(18,115,0,6,1),(19,136,0,6,2),(29,93,0,10,4),(30,97,0,10,1),(31,99,0,10,4),(32,136,0,10,2),(33,93,0,11,5),(34,97,0,11,1),(35,99,0,11,4),(36,136,0,11,2),(37,97,0,12,1),(38,99,0,12,4),(39,136,0,12,2),(40,97,6,11,1),(41,97,5,11,1),(42,99,5,11,4),(43,136,6,11,2),(44,136,5,11,2),(45,99,6,11,4),(46,97,0,13,1),(47,99,0,13,4),(48,136,0,13,2),(49,97,0,14,1),(50,99,0,14,4),(51,115,0,14,1),(52,136,0,14,2);
 /*!40000 ALTER TABLE `catalog_product_entity_int` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1816,7 +1820,7 @@ CREATE TABLE `catalog_product_entity_media_gallery` (
   PRIMARY KEY (`value_id`),
   KEY `CATALOG_PRODUCT_ENTITY_MEDIA_GALLERY_ATTRIBUTE_ID` (`attribute_id`),
   CONSTRAINT `CAT_PRD_ENTT_MDA_GLR_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Backend Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1825,7 +1829,7 @@ CREATE TABLE `catalog_product_entity_media_gallery` (
 
 LOCK TABLES `catalog_product_entity_media_gallery` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_media_gallery` VALUES (11,90,'/d/u/dummy-neourban3.jpg','image',0),(12,90,'/d/u/dummy-neourban4_1.jpg','image',0),(13,90,'/d/u/dummy-neourban3_1.jpg','image',0),(14,90,'/d/u/dummy-neourban4_1_1.jpg','image',0),(18,90,'/g/r/green_tea.jpeg','image',0),(19,90,'/r/e/red_tea.jpg','image',0);
+INSERT INTO `catalog_product_entity_media_gallery` VALUES (11,90,'/d/u/dummy-neourban3.jpg','image',0),(12,90,'/d/u/dummy-neourban4_1.jpg','image',0),(13,90,'/d/u/dummy-neourban3_1.jpg','image',0),(14,90,'/d/u/dummy-neourban4_1_1.jpg','image',0),(18,90,'/g/r/green_tea.jpeg','image',0),(19,90,'/r/e/red_tea.jpg','image',0),(20,90,'/n/e/nescafew.jpg','image',0),(22,90,'/j/a/jacbos.jpg','image',0);
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1852,7 +1856,7 @@ CREATE TABLE `catalog_product_entity_media_gallery_value` (
   CONSTRAINT `CAT_PRD_ENTT_MDA_GLR_VAL_ENTT_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_MDA_GLR_VAL_STORE_ID_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_MDA_GLR_VAL_VAL_ID_CAT_PRD_ENTT_MDA_GLR_VAL_ID` FOREIGN KEY (`value_id`) REFERENCES `catalog_product_entity_media_gallery` (`value_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Value Table';
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Media Gallery Attribute Value Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1861,7 +1865,7 @@ CREATE TABLE `catalog_product_entity_media_gallery_value` (
 
 LOCK TABLES `catalog_product_entity_media_gallery_value` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_media_gallery_value` VALUES (11,0,5,NULL,1,0,36),(12,0,5,NULL,2,0,37),(13,0,6,NULL,1,0,38),(14,0,6,NULL,2,0,39),(19,5,11,NULL,1,0,46),(19,0,11,NULL,1,0,50),(19,6,11,NULL,1,0,51),(18,6,10,NULL,1,0,52),(18,5,10,NULL,1,0,53),(18,0,10,NULL,1,0,54);
+INSERT INTO `catalog_product_entity_media_gallery_value` VALUES (11,0,5,NULL,1,0,36),(12,0,5,NULL,2,0,37),(13,0,6,NULL,1,0,38),(14,0,6,NULL,2,0,39),(19,5,11,NULL,1,0,46),(19,0,11,NULL,1,0,50),(19,6,11,NULL,1,0,51),(18,6,10,NULL,1,0,52),(18,5,10,NULL,1,0,53),(18,0,10,NULL,1,0,54),(20,0,13,NULL,1,0,55),(22,0,14,NULL,2,0,57);
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1888,7 +1892,7 @@ CREATE TABLE `catalog_product_entity_media_gallery_value_to_entity` (
 
 LOCK TABLES `catalog_product_entity_media_gallery_value_to_entity` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value_to_entity` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_media_gallery_value_to_entity` VALUES (11,5),(12,5),(13,6),(14,6),(18,10),(19,11);
+INSERT INTO `catalog_product_entity_media_gallery_value_to_entity` VALUES (11,5),(12,5),(13,6),(14,6),(18,10),(19,11),(20,13),(22,14);
 /*!40000 ALTER TABLE `catalog_product_entity_media_gallery_value_to_entity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1943,7 +1947,7 @@ CREATE TABLE `catalog_product_entity_text` (
   CONSTRAINT `CATALOG_PRODUCT_ENTITY_TEXT_STORE_ID_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_TEXT_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_TEXT_ENTT_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Text Attribute Backend Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1952,7 +1956,7 @@ CREATE TABLE `catalog_product_entity_text` (
 
 LOCK TABLES `catalog_product_entity_text` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_text` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_text` VALUES (13,85,0,5,'Product 1'),(14,75,0,6,'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer</p>'),(15,76,0,6,'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>'),(20,75,0,10,'<p>Best Tea </p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -78px; top: -14px;\">\r\n<div class=\"gtx-trans-icon\"> </div>\r\n</div>'),(21,85,0,10,'Green Tea'),(22,75,0,11,'<p>Vyborny cajicek</p>'),(23,85,0,11,'Red Tea'),(24,75,0,12,'<p>Vyborny cajicek</p>'),(25,85,0,12,'Green Tea'),(26,75,5,11,'<p>Vyborny cajicek</p>'),(27,85,5,11,'Red Tea'),(28,75,6,11,'<p>Vyborny cajicek</p>'),(29,85,6,11,'Red Tea');
+INSERT INTO `catalog_product_entity_text` VALUES (13,85,0,5,'Product 1'),(14,75,0,6,'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer</p>'),(15,76,0,6,'<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>'),(20,75,0,10,'<p>Best Tea </p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -78px; top: -14px;\">\r\n<div class=\"gtx-trans-icon\"> </div>\r\n</div>'),(21,85,0,10,'Green Tea'),(22,75,0,11,'<p>Vyborny cajicek</p>'),(23,85,0,11,'Red Tea'),(24,75,0,12,'<p>Vyborny cajicek</p>'),(25,85,0,12,'Green Tea'),(26,75,5,11,'<p>Vyborny cajicek</p>'),(27,85,5,11,'Red Tea'),(28,75,6,11,'<p>Vyborny cajicek</p>'),(29,85,6,11,'Red Tea'),(30,85,0,13,'Nescafe'),(31,85,0,14,'jacobs');
 /*!40000 ALTER TABLE `catalog_product_entity_text` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2011,7 +2015,7 @@ CREATE TABLE `catalog_product_entity_varchar` (
   CONSTRAINT `CATALOG_PRODUCT_ENTITY_VARCHAR_STORE_ID_STORE_STORE_ID` FOREIGN KEY (`store_id`) REFERENCES `store` (`store_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_VCHR_ATTR_ID_EAV_ATTR_ATTR_ID` FOREIGN KEY (`attribute_id`) REFERENCES `eav_attribute` (`attribute_id`) ON DELETE CASCADE,
   CONSTRAINT `CAT_PRD_ENTT_VCHR_ENTT_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`entity_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=276 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table';
+) ENGINE=InnoDB AUTO_INCREMENT=310 DEFAULT CHARSET=utf8 COMMENT='Catalog Product Varchar Attribute Backend Table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2020,7 +2024,7 @@ CREATE TABLE `catalog_product_entity_varchar` (
 
 LOCK TABLES `catalog_product_entity_varchar` WRITE;
 /*!40000 ALTER TABLE `catalog_product_entity_varchar` DISABLE KEYS */;
-INSERT INTO `catalog_product_entity_varchar` VALUES (61,73,0,5,'Product 1'),(62,84,0,5,'Product 1'),(63,86,0,5,'Product 1 '),(64,87,0,5,'/d/u/dummy-neourban3.jpg'),(65,88,0,5,'/d/u/dummy-neourban3.jpg'),(66,89,0,5,'/d/u/dummy-neourban3.jpg'),(67,106,0,5,'container2'),(68,121,0,5,'product-1'),(69,124,0,5,'0'),(70,129,0,5,'2'),(71,135,0,5,'/d/u/dummy-neourban3.jpg'),(80,73,0,6,'Product 2'),(81,87,0,6,'/d/u/dummy-neourban3_1.jpg'),(82,88,0,6,'/d/u/dummy-neourban3_1.jpg'),(83,89,0,6,'/d/u/dummy-neourban3_1.jpg'),(84,106,0,6,'container2'),(85,121,0,6,'product-2'),(86,124,0,6,'0'),(87,129,0,6,'2'),(88,135,0,6,'/d/u/dummy-neourban3_1.jpg'),(172,73,0,10,'Green Tea'),(173,84,0,10,'Green Tea'),(174,86,0,10,'Green Tea Best tea'),(175,87,0,10,'/g/r/green_tea.jpeg'),(176,88,0,10,'/g/r/green_tea.jpeg'),(177,89,0,10,'/g/r/green_tea.jpeg'),(178,106,0,10,'container2'),(179,114,0,10,'SK'),(180,121,0,10,'green-tea-zeleny'),(181,129,0,10,'1'),(185,73,0,11,'Red Tea'),(186,84,0,11,'Red Tea'),(187,86,0,11,'Red Tea '),(188,87,0,11,'/r/e/red_tea.jpg'),(189,88,0,11,'/r/e/red_tea.jpg'),(190,89,0,11,'/r/e/red_tea.jpg'),(191,106,0,11,'container2'),(192,114,0,11,'SK'),(193,121,0,11,'red-tea'),(194,129,0,11,'1'),(198,73,0,12,'Green Tea'),(199,84,0,12,'Green Tea'),(200,86,0,12,'Green Tea Vyborny cajicek'),(201,106,0,12,'container2'),(202,114,0,12,'SK'),(203,121,0,12,'green-tea'),(204,124,0,12,'0'),(205,129,0,12,'2'),(206,124,0,10,'0'),(216,124,0,11,'0'),(220,73,5,11,'Red Tea'),(221,84,5,11,'Red Tea'),(222,86,5,11,'Red Tea '),(223,87,5,11,'/r/e/red_tea.jpg'),(224,88,5,11,'/r/e/red_tea.jpg'),(225,89,5,11,'/r/e/red_tea.jpg'),(226,106,5,11,'container2'),(227,114,6,11,'SK'),(228,114,5,11,'SK'),(229,121,5,11,'red-tea'),(230,124,6,11,'0'),(231,124,5,11,'0'),(235,73,6,11,'Roter Tee'),(236,84,6,11,'Red Tea'),(237,86,6,11,'Red Tea '),(238,87,6,11,'/r/e/red_tea.jpg'),(239,88,6,11,'/r/e/red_tea.jpg'),(240,89,6,11,'/r/e/red_tea.jpg'),(241,106,6,11,'container2'),(242,121,6,11,'red-tea'),(258,73,6,10,'Grüner Tee'),(259,87,6,10,'/g/r/green_tea.jpeg'),(260,88,6,10,'/g/r/green_tea.jpeg'),(261,89,6,10,'/g/r/green_tea.jpeg'),(262,124,6,10,'0'),(263,124,5,10,'0'),(267,87,5,10,'/g/r/green_tea.jpeg'),(268,88,5,10,'/g/r/green_tea.jpeg'),(269,89,5,10,'/g/r/green_tea.jpeg');
+INSERT INTO `catalog_product_entity_varchar` VALUES (61,73,0,5,'Product 1'),(62,84,0,5,'Product 1'),(63,86,0,5,'Product 1 '),(64,87,0,5,'/d/u/dummy-neourban3.jpg'),(65,88,0,5,'/d/u/dummy-neourban3.jpg'),(66,89,0,5,'/d/u/dummy-neourban3.jpg'),(67,106,0,5,'container2'),(68,121,0,5,'product-1'),(69,124,0,5,'0'),(70,129,0,5,'2'),(71,135,0,5,'/d/u/dummy-neourban3.jpg'),(80,73,0,6,'Product 2'),(81,87,0,6,'/d/u/dummy-neourban3_1.jpg'),(82,88,0,6,'/d/u/dummy-neourban3_1.jpg'),(83,89,0,6,'/d/u/dummy-neourban3_1.jpg'),(84,106,0,6,'container2'),(85,121,0,6,'product-2'),(86,124,0,6,'0'),(87,129,0,6,'2'),(88,135,0,6,'/d/u/dummy-neourban3_1.jpg'),(172,73,0,10,'Green Tea'),(173,84,0,10,'Green Tea'),(174,86,0,10,'Green Tea Best tea'),(175,87,0,10,'/g/r/green_tea.jpeg'),(176,88,0,10,'/g/r/green_tea.jpeg'),(177,89,0,10,'/g/r/green_tea.jpeg'),(178,106,0,10,'container2'),(179,114,0,10,'SK'),(180,121,0,10,'green-tea-zeleny'),(181,129,0,10,'1'),(185,73,0,11,'Red Tea'),(186,84,0,11,'Red Tea'),(187,86,0,11,'Red Tea '),(188,87,0,11,'/r/e/red_tea.jpg'),(189,88,0,11,'/r/e/red_tea.jpg'),(190,89,0,11,'/r/e/red_tea.jpg'),(191,106,0,11,'container2'),(192,114,0,11,'SK'),(193,121,0,11,'red-tea'),(194,129,0,11,'1'),(198,73,0,12,'Green Tea'),(199,84,0,12,'Green Tea'),(200,86,0,12,'Green Tea Vyborny cajicek'),(201,106,0,12,'container2'),(202,114,0,12,'SK'),(203,121,0,12,'green-tea'),(204,124,0,12,'0'),(205,129,0,12,'2'),(206,124,0,10,'0'),(216,124,0,11,'0'),(220,73,5,11,'Red Tea'),(221,84,5,11,'Red Tea'),(222,86,5,11,'Red Tea '),(223,87,5,11,'/r/e/red_tea.jpg'),(224,88,5,11,'/r/e/red_tea.jpg'),(225,89,5,11,'/r/e/red_tea.jpg'),(226,106,5,11,'container2'),(227,114,6,11,'SK'),(228,114,5,11,'SK'),(229,121,5,11,'red-tea'),(230,124,6,11,'0'),(231,124,5,11,'0'),(235,73,6,11,'Roter Tee'),(236,84,6,11,'Red Tea'),(237,86,6,11,'Red Tea '),(238,87,6,11,'/r/e/red_tea.jpg'),(239,88,6,11,'/r/e/red_tea.jpg'),(240,89,6,11,'/r/e/red_tea.jpg'),(241,106,6,11,'container2'),(242,121,6,11,'red-tea'),(258,73,6,10,'Grüner Tee'),(259,87,6,10,'/g/r/green_tea.jpeg'),(260,88,6,10,'/g/r/green_tea.jpeg'),(261,89,6,10,'/g/r/green_tea.jpeg'),(262,124,6,10,'0'),(263,124,5,10,'0'),(267,87,5,10,'/g/r/green_tea.jpeg'),(268,88,5,10,'/g/r/green_tea.jpeg'),(269,89,5,10,'/g/r/green_tea.jpeg'),(276,73,0,13,'Nescafe'),(277,84,0,13,'Nescafe'),(278,86,0,13,'Nescafe '),(279,87,0,13,'/n/e/nescafew.jpg'),(280,88,0,13,'/n/e/nescafew.jpg'),(281,89,0,13,'/n/e/nescafew.jpg'),(282,106,0,13,'container2'),(283,121,0,13,'nescafe'),(284,124,0,13,'0'),(285,129,0,13,'2'),(286,135,0,13,'/n/e/nescafew.jpg'),(291,73,0,14,'Jacobs'),(292,87,0,14,'/j/a/jacbos.jpg'),(293,88,0,14,'/j/a/jacbos.jpg'),(294,89,0,14,'/j/a/jacbos.jpg'),(295,106,0,14,'container2'),(296,121,0,14,'jacobs'),(297,124,0,14,'0'),(298,129,0,14,'2'),(299,135,0,14,'/j/a/jacbos.jpg'),(304,84,0,14,'jacobs'),(305,86,0,14,'jacobs');
 /*!40000 ALTER TABLE `catalog_product_entity_varchar` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2082,7 +2086,7 @@ CREATE TABLE `catalog_product_index_eav` (
 
 LOCK TABLES `catalog_product_index_eav` WRITE;
 /*!40000 ALTER TABLE `catalog_product_index_eav` DISABLE KEYS */;
-INSERT INTO `catalog_product_index_eav` VALUES (5,99,1,4,5),(5,99,2,4,5),(5,99,3,4,5),(5,99,4,4,5),(5,99,5,4,5),(5,99,6,4,5),(6,99,1,4,6),(6,99,2,4,6),(6,99,3,4,6),(6,99,4,4,6),(6,99,5,4,6),(6,99,6,4,6),(10,93,1,4,10),(10,93,2,4,10),(10,93,3,4,10),(10,93,4,4,10),(10,93,5,4,10),(10,93,6,4,10),(10,99,1,4,10),(10,99,2,4,10),(10,99,3,4,10),(10,99,4,4,10),(10,99,5,4,10),(10,99,6,4,10),(11,93,1,5,11),(11,93,2,5,11),(11,93,3,5,11),(11,93,4,5,11),(11,93,5,5,11),(11,93,6,5,11),(11,99,1,4,11),(11,99,2,4,11),(11,99,3,4,11),(11,99,4,4,11),(11,99,5,4,11),(11,99,6,4,11),(12,93,5,4,10),(12,93,5,5,11),(12,93,6,4,10),(12,93,6,5,11),(12,99,1,4,12),(12,99,2,4,12),(12,99,3,4,12),(12,99,4,4,12),(12,99,5,4,10),(12,99,5,4,11),(12,99,5,4,12),(12,99,6,4,10),(12,99,6,4,11),(12,99,6,4,12);
+INSERT INTO `catalog_product_index_eav` VALUES (5,99,1,4,5),(5,99,2,4,5),(5,99,3,4,5),(5,99,4,4,5),(5,99,5,4,5),(5,99,6,4,5),(6,99,1,4,6),(6,99,2,4,6),(6,99,3,4,6),(6,99,4,4,6),(6,99,5,4,6),(6,99,6,4,6),(10,93,1,4,10),(10,93,2,4,10),(10,93,3,4,10),(10,93,4,4,10),(10,93,5,4,10),(10,93,6,4,10),(10,99,1,4,10),(10,99,2,4,10),(10,99,3,4,10),(10,99,4,4,10),(10,99,5,4,10),(10,99,6,4,10),(11,93,1,5,11),(11,93,2,5,11),(11,93,3,5,11),(11,93,4,5,11),(11,93,5,5,11),(11,93,6,5,11),(11,99,1,4,11),(11,99,2,4,11),(11,99,3,4,11),(11,99,4,4,11),(11,99,5,4,11),(11,99,6,4,11),(12,93,5,4,10),(12,93,5,5,11),(12,93,6,4,10),(12,93,6,5,11),(12,99,1,4,12),(12,99,2,4,12),(12,99,3,4,12),(12,99,4,4,12),(12,99,5,4,10),(12,99,5,4,11),(12,99,5,4,12),(12,99,6,4,10),(12,99,6,4,11),(12,99,6,4,12),(13,99,1,4,13),(13,99,2,4,13),(13,99,3,4,13),(13,99,4,4,13),(13,99,5,4,13),(13,99,6,4,13),(14,99,1,4,14),(14,99,2,4,14),(14,99,3,4,14),(14,99,4,4,14),(14,99,5,4,14),(14,99,6,4,14);
 /*!40000 ALTER TABLE `catalog_product_index_eav` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2257,7 +2261,7 @@ CREATE TABLE `catalog_product_index_eav_replica` (
 
 LOCK TABLES `catalog_product_index_eav_replica` WRITE;
 /*!40000 ALTER TABLE `catalog_product_index_eav_replica` DISABLE KEYS */;
-INSERT INTO `catalog_product_index_eav_replica` VALUES (5,99,1,4,5),(5,99,2,4,5),(5,99,3,4,5),(5,99,4,4,5),(5,99,5,4,5),(5,99,6,4,5),(6,99,1,4,6),(6,99,2,4,6),(6,99,3,4,6),(6,99,4,4,6),(6,99,5,4,6),(6,99,6,4,6),(10,93,1,4,10),(10,93,2,4,10),(10,93,3,4,10),(10,93,4,4,10),(10,93,5,4,10),(10,93,6,4,10),(10,99,1,4,10),(10,99,2,4,10),(10,99,3,4,10),(10,99,4,4,10),(10,99,5,4,10),(10,99,6,4,10),(11,93,1,5,11),(11,93,2,5,11),(11,93,3,5,11),(11,93,4,5,11),(11,93,5,5,11),(11,93,6,5,11),(11,99,1,4,11),(11,99,2,4,11),(11,99,3,4,11),(11,99,4,4,11),(11,99,5,4,11),(11,99,6,4,11),(12,93,5,4,10),(12,93,5,5,11),(12,93,6,4,10),(12,93,6,5,11),(12,99,1,4,12),(12,99,2,4,12),(12,99,3,4,12),(12,99,4,4,12),(12,99,5,4,10),(12,99,5,4,11),(12,99,5,4,12),(12,99,6,4,10),(12,99,6,4,11),(12,99,6,4,12);
+INSERT INTO `catalog_product_index_eav_replica` VALUES (5,99,1,4,5),(5,99,2,4,5),(5,99,3,4,5),(5,99,4,4,5),(5,99,5,4,5),(5,99,6,4,5),(6,99,1,4,6),(6,99,2,4,6),(6,99,3,4,6),(6,99,4,4,6),(6,99,5,4,6),(6,99,6,4,6),(10,93,1,4,10),(10,93,2,4,10),(10,93,3,4,10),(10,93,4,4,10),(10,93,5,4,10),(10,93,6,4,10),(10,99,1,4,10),(10,99,2,4,10),(10,99,3,4,10),(10,99,4,4,10),(10,99,5,4,10),(10,99,6,4,10),(11,93,1,5,11),(11,93,2,5,11),(11,93,3,5,11),(11,93,4,5,11),(11,93,5,5,11),(11,93,6,5,11),(11,99,1,4,11),(11,99,2,4,11),(11,99,3,4,11),(11,99,4,4,11),(11,99,5,4,11),(11,99,6,4,11),(12,93,5,4,10),(12,93,5,5,11),(12,93,6,4,10),(12,93,6,5,11),(12,99,1,4,12),(12,99,2,4,12),(12,99,3,4,12),(12,99,4,4,12),(12,99,5,4,10),(12,99,5,4,11),(12,99,5,4,12),(12,99,6,4,10),(12,99,6,4,11),(12,99,6,4,12),(13,99,1,4,13),(13,99,2,4,13),(13,99,3,4,13),(13,99,4,4,13),(13,99,5,4,13),(13,99,6,4,13),(14,99,1,4,14),(14,99,2,4,14),(14,99,3,4,14),(14,99,4,4,14),(14,99,5,4,14),(14,99,6,4,14);
 /*!40000 ALTER TABLE `catalog_product_index_eav_replica` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2320,7 +2324,7 @@ CREATE TABLE `catalog_product_index_price` (
 
 LOCK TABLES `catalog_product_index_price` WRITE;
 /*!40000 ALTER TABLE `catalog_product_index_price` DISABLE KEYS */;
-INSERT INTO `catalog_product_index_price` VALUES (5,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(10,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(12,0,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,1,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,2,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,3,1,2,0.000000,0.000000,0.000000,0.000000,NULL);
+INSERT INTO `catalog_product_index_price` VALUES (5,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(10,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(12,0,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,1,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,2,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,3,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(13,0,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(13,1,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(13,2,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(13,3,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(14,0,3,2,80.000000,80.000000,80.000000,80.000000,NULL),(14,1,3,2,80.000000,80.000000,80.000000,80.000000,NULL),(14,2,3,2,80.000000,80.000000,80.000000,80.000000,NULL),(14,3,3,2,80.000000,80.000000,80.000000,80.000000,NULL);
 /*!40000 ALTER TABLE `catalog_product_index_price` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2907,7 +2911,7 @@ CREATE TABLE `catalog_product_index_price_replica` (
 
 LOCK TABLES `catalog_product_index_price_replica` WRITE;
 /*!40000 ALTER TABLE `catalog_product_index_price_replica` DISABLE KEYS */;
-INSERT INTO `catalog_product_index_price_replica` VALUES (5,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(10,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(12,0,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,1,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,2,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,3,1,2,0.000000,0.000000,0.000000,0.000000,NULL);
+INSERT INTO `catalog_product_index_price_replica` VALUES (5,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(5,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,0,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,1,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,2,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(6,3,1,2,50.000000,50.000000,50.000000,50.000000,NULL),(10,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(10,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,0,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,1,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,2,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(11,3,2,2,10.000000,10.000000,10.000000,10.000000,NULL),(12,0,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,1,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,2,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(12,3,1,2,0.000000,0.000000,0.000000,0.000000,NULL),(13,0,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(13,1,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(13,2,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(13,3,3,2,40.000000,40.000000,40.000000,40.000000,NULL),(14,0,3,2,80.000000,80.000000,80.000000,80.000000,NULL),(14,1,3,2,80.000000,80.000000,80.000000,80.000000,NULL),(14,2,3,2,80.000000,80.000000,80.000000,80.000000,NULL),(14,3,3,2,80.000000,80.000000,80.000000,80.000000,NULL);
 /*!40000 ALTER TABLE `catalog_product_index_price_replica` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3488,7 +3492,7 @@ CREATE TABLE `catalog_product_website` (
 
 LOCK TABLES `catalog_product_website` WRITE;
 /*!40000 ALTER TABLE `catalog_product_website` DISABLE KEYS */;
-INSERT INTO `catalog_product_website` VALUES (5,1),(6,1),(10,2),(11,2),(12,1);
+INSERT INTO `catalog_product_website` VALUES (5,1),(6,1),(10,2),(11,2),(12,1),(13,3),(14,3);
 /*!40000 ALTER TABLE `catalog_product_website` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3518,7 +3522,7 @@ CREATE TABLE `catalog_url_rewrite_product_category` (
 
 LOCK TABLES `catalog_url_rewrite_product_category` WRITE;
 /*!40000 ALTER TABLE `catalog_url_rewrite_product_category` DISABLE KEYS */;
-INSERT INTO `catalog_url_rewrite_product_category` VALUES (46,3,5),(44,3,5),(50,3,6),(48,3,6),(64,6,10),(62,6,10),(68,6,11),(66,6,11);
+INSERT INTO `catalog_url_rewrite_product_category` VALUES (46,3,5),(44,3,5),(50,3,6),(48,3,6),(64,6,10),(62,6,10),(68,6,11),(66,6,11),(72,7,13),(70,7,13),(82,7,14),(78,7,14);
 /*!40000 ALTER TABLE `catalog_url_rewrite_product_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3589,7 +3593,7 @@ CREATE TABLE `cataloginventory_stock_item` (
   KEY `CATALOGINVENTORY_STOCK_ITEM_STOCK_ID` (`stock_id`),
   CONSTRAINT `CATINV_STOCK_ITEM_PRD_ID_CAT_PRD_ENTT_ENTT_ID` FOREIGN KEY (`product_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE,
   CONSTRAINT `CATINV_STOCK_ITEM_STOCK_ID_CATINV_STOCK_STOCK_ID` FOREIGN KEY (`stock_id`) REFERENCES `cataloginventory_stock` (`stock_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='Cataloginventory Stock Item';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3598,7 +3602,7 @@ CREATE TABLE `cataloginventory_stock_item` (
 
 LOCK TABLES `cataloginventory_stock_item` WRITE;
 /*!40000 ALTER TABLE `cataloginventory_stock_item` DISABLE KEYS */;
-INSERT INTO `cataloginventory_stock_item` VALUES (5,5,1,500.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(6,6,1,500.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(7,10,1,500.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(8,11,1,5000.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(9,12,1,0.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,1,1,1.0000,1,0,0,0);
+INSERT INTO `cataloginventory_stock_item` VALUES (5,5,1,500.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(6,6,1,500.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(7,10,1,500.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(8,11,1,5000.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(9,12,1,0.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,1,1,1.0000,1,0,0,0),(10,13,1,5.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0),(11,14,1,1.0000,0.0000,1,0,0,1,1.0000,1,10000.0000,1,1,NULL,1.0000,1,1,1,0,1,1.0000,1,0,0,0);
 /*!40000 ALTER TABLE `cataloginventory_stock_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3628,7 +3632,7 @@ CREATE TABLE `cataloginventory_stock_status` (
 
 LOCK TABLES `cataloginventory_stock_status` WRITE;
 /*!40000 ALTER TABLE `cataloginventory_stock_status` DISABLE KEYS */;
-INSERT INTO `cataloginventory_stock_status` VALUES (5,0,1,500.0000,1),(6,0,1,500.0000,1),(10,0,1,500.0000,1),(11,0,1,5000.0000,1),(12,0,1,0.0000,1);
+INSERT INTO `cataloginventory_stock_status` VALUES (5,0,1,500.0000,1),(6,0,1,500.0000,1),(10,0,1,500.0000,1),(11,0,1,5000.0000,1),(12,0,1,0.0000,1),(13,0,1,5.0000,1),(14,0,1,1.0000,1);
 /*!40000 ALTER TABLE `cataloginventory_stock_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3686,7 +3690,7 @@ CREATE TABLE `cataloginventory_stock_status_replica` (
 
 LOCK TABLES `cataloginventory_stock_status_replica` WRITE;
 /*!40000 ALTER TABLE `cataloginventory_stock_status_replica` DISABLE KEYS */;
-INSERT INTO `cataloginventory_stock_status_replica` VALUES (5,0,1,500.0000,1),(6,0,1,500.0000,1),(10,0,1,500.0000,1),(11,0,1,5000.0000,1),(12,0,1,0.0000,1);
+INSERT INTO `cataloginventory_stock_status_replica` VALUES (5,0,1,500.0000,1),(6,0,1,500.0000,1),(10,0,1,500.0000,1),(11,0,1,5000.0000,1),(12,0,1,0.0000,1),(13,0,1,5.0000,1),(14,0,1,1.0000,1);
 /*!40000 ALTER TABLE `cataloginventory_stock_status_replica` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6134,7 +6138,7 @@ CREATE TABLE `email_catalog` (
   KEY `EMAIL_CATALOG_UPDATED_AT` (`updated_at`),
   KEY `EMAIL_CATALOG_LAST_IMPORTED_AT` (`last_imported_at`),
   CONSTRAINT `EMAIL_CATALOG_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID` FOREIGN KEY (`product_id`) REFERENCES `catalog_product_entity` (`entity_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Connector Catalog';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Connector Catalog';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6143,7 +6147,7 @@ CREATE TABLE `email_catalog` (
 
 LOCK TABLES `email_catalog` WRITE;
 /*!40000 ALTER TABLE `email_catalog` DISABLE KEYS */;
-INSERT INTO `email_catalog` VALUES (1,5,0,'2020-07-30 14:03:02','2020-08-12 14:19:15',NULL),(2,6,0,'2020-07-30 14:03:24','2020-08-12 14:23:51',NULL),(3,10,0,'2020-08-12 14:27:42','2020-08-13 08:53:33',NULL),(4,11,0,'2020-08-12 14:27:44','2020-08-13 08:42:23',NULL),(5,12,0,'2020-08-12 14:27:47','2020-08-13 08:53:33',NULL);
+INSERT INTO `email_catalog` VALUES (1,5,0,'2020-07-30 14:03:02','2020-08-12 14:19:15',NULL),(2,6,0,'2020-07-30 14:03:24','2020-08-12 14:23:51',NULL),(3,10,0,'2020-08-12 14:27:42','2020-08-13 08:53:33',NULL),(4,11,0,'2020-08-12 14:27:44','2020-08-13 08:42:23',NULL),(5,12,0,'2020-08-12 14:27:47','2020-08-13 08:53:33',NULL),(6,13,0,'2020-08-13 10:15:49','2020-08-13 10:15:49',NULL),(7,14,0,'2020-08-13 10:15:51','2020-08-13 10:16:54',NULL);
 /*!40000 ALTER TABLE `email_catalog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6661,7 +6665,7 @@ CREATE TABLE `indexer_state` (
 
 LOCK TABLES `indexer_state` WRITE;
 /*!40000 ALTER TABLE `indexer_state` DISABLE KEYS */;
-INSERT INTO `indexer_state` VALUES (1,'design_config_grid','valid','2020-08-13 08:46:00','e06e8e6eea4b5abe58dfb403e66bba33'),(2,'customer_grid','valid','2020-08-13 08:46:06','0c37e096be6f90603791f49727da0bda'),(3,'catalog_category_product','valid','2020-08-13 08:46:17','75a41eaddb1ad00406d40a5af3a7efec'),(4,'catalog_product_category','valid','2020-08-13 08:46:17','164cbcb66503965cd64a8ab32a79b387'),(5,'catalogrule_rule','valid','2020-08-13 08:46:25','3353314ea598e2129713137e4e60c68e'),(6,'catalog_product_attribute','valid','2020-08-13 08:46:26','6b5cf39c02395b1ee26e5c5f61f5c846'),(7,'cataloginventory_stock','valid','2020-08-13 08:46:27','7fafd050d2e65b1d1d963a24814d6da0'),(8,'inventory','valid','2020-08-13 08:46:28','dbcf49ae1d5b171e4db9a9bb8860f888'),(9,'catalogrule_product','valid','2020-08-13 08:46:25','e94121a8bc2e01e0cc2a65230b83bcf7'),(10,'catalog_product_price','valid','2020-08-13 08:46:29','5e35de96c029c28595f98aa9722be095'),(11,'catalogsearch_fulltext','valid','2020-08-13 08:46:34','11d6cdebd71eab1d90fb1409338ff78c');
+INSERT INTO `indexer_state` VALUES (1,'design_config_grid','valid','2020-08-13 10:17:59','e06e8e6eea4b5abe58dfb403e66bba33'),(2,'customer_grid','valid','2020-08-13 10:17:59','0c37e096be6f90603791f49727da0bda'),(3,'catalog_category_product','valid','2020-08-13 10:18:00','75a41eaddb1ad00406d40a5af3a7efec'),(4,'catalog_product_category','valid','2020-08-13 10:18:00','164cbcb66503965cd64a8ab32a79b387'),(5,'catalogrule_rule','valid','2020-08-13 10:18:01','3353314ea598e2129713137e4e60c68e'),(6,'catalog_product_attribute','valid','2020-08-13 10:18:02','6b5cf39c02395b1ee26e5c5f61f5c846'),(7,'cataloginventory_stock','valid','2020-08-13 10:18:02','7fafd050d2e65b1d1d963a24814d6da0'),(8,'inventory','valid','2020-08-13 10:18:02','dbcf49ae1d5b171e4db9a9bb8860f888'),(9,'catalogrule_product','valid','2020-08-13 10:18:01','e94121a8bc2e01e0cc2a65230b83bcf7'),(10,'catalog_product_price','valid','2020-08-13 10:18:03','5e35de96c029c28595f98aa9722be095'),(11,'catalogsearch_fulltext','valid','2020-08-13 10:18:06','11d6cdebd71eab1d90fb1409338ff78c');
 /*!40000 ALTER TABLE `indexer_state` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6747,7 +6751,7 @@ CREATE TABLE `inventory_low_stock_notification_configuration` (
 
 LOCK TABLES `inventory_low_stock_notification_configuration` WRITE;
 /*!40000 ALTER TABLE `inventory_low_stock_notification_configuration` DISABLE KEYS */;
-INSERT INTO `inventory_low_stock_notification_configuration` VALUES ('default','Green Tea-1',NULL),('default','Green Tea-zeleny',NULL),('default','Grüner Tee',NULL),('default','Product 1',NULL),('default','Product 2',NULL),('default','Red Tea',NULL),('default','Roter Tee',NULL);
+INSERT INTO `inventory_low_stock_notification_configuration` VALUES ('default','Green Tea-1',NULL),('default','Green Tea-zeleny',NULL),('default','Grüner Tee',NULL),('default','Jacobs',NULL),('default','Nescafe',NULL),('default','Product 1',NULL),('default','Product 2',NULL),('default','Red Tea',NULL),('default','Roter Tee',NULL);
 /*!40000 ALTER TABLE `inventory_low_stock_notification_configuration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6960,7 +6964,7 @@ CREATE TABLE `inventory_source_item` (
   UNIQUE KEY `INVENTORY_SOURCE_ITEM_SOURCE_CODE_SKU` (`source_code`,`sku`),
   KEY `INVENTORY_SOURCE_ITEM_SKU_SOURCE_CODE_QUANTITY` (`sku`,`source_code`,`quantity`),
   CONSTRAINT `INVENTORY_SOURCE_ITEM_SOURCE_CODE_INVENTORY_SOURCE_SOURCE_CODE` FOREIGN KEY (`source_code`) REFERENCES `inventory_source` (`source_code`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6969,7 +6973,7 @@ CREATE TABLE `inventory_source_item` (
 
 LOCK TABLES `inventory_source_item` WRITE;
 /*!40000 ALTER TABLE `inventory_source_item` DISABLE KEYS */;
-INSERT INTO `inventory_source_item` VALUES (1,'default','Product 1',500.0000,1),(5,'default','Product 1-1',500.0000,1),(7,'default','Product 2',500.0000,1),(17,'default','Green Tea-zeleny',0.0000,0),(18,'default','Green Tea',500.0000,1),(19,'default','Green Tea-1',500.0000,1),(20,'default','Red Tea',5000.0000,1),(30,'default','Roter Tee',5000.0000,1),(32,'default','Grüner Tee',500.0000,1);
+INSERT INTO `inventory_source_item` VALUES (1,'default','Product 1',500.0000,1),(5,'default','Product 1-1',500.0000,1),(7,'default','Product 2',500.0000,1),(17,'default','Green Tea-zeleny',0.0000,0),(18,'default','Green Tea',500.0000,1),(19,'default','Green Tea-1',500.0000,1),(20,'default','Red Tea',5000.0000,1),(30,'default','Roter Tee',5000.0000,1),(32,'default','Grüner Tee',500.0000,1),(38,'default','Nescafe',5.0000,1),(40,'default','Nescafe-1',5.0000,1),(42,'default','Jacobs',1.0000,1);
 /*!40000 ALTER TABLE `inventory_source_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -12799,7 +12803,7 @@ CREATE TABLE `tfa_user_config` (
 
 LOCK TABLES `tfa_user_config` WRITE;
 /*!40000 ALTER TABLE `tfa_user_config` DISABLE KEYS */;
-INSERT INTO `tfa_user_config` VALUES (1,2,'[]','0:3:LWXi9qv1mFUSkqQP67whDtdSwuZU6NvnMxq3rCqlvzYEh4rT00d1VtKopeiAIxY7T5vl8tzWCO0hOrSwhHSIMYQpWFF4scLAIyT6owL3ADMyijIKWdO4antQ2yyzhEi5et4MXBwON3krg2yPbYI2iWk9ASv1jh28tYHMHWSS2wM7kfafe5VBe2zK1ja9Bk975zF9dMO0zsYYu9r9ikc6Jbai555IwGiyI6fTZPN/mK/Qv8xVBcMVekjpullHXqpCwI/VAkn5tHkH/Nh+8IrowEh6DE+jI1wqtB8HBxiMNUQFJSSBcCwKtVqAkwLoU9/0p5r3bS3F9nSgKinoc7T5la5irIfSSEgtblQNIXyXqhAuQRvJ/UYtkd8nttUnsem/ESk/q05cJo/FAi6uy4JmayQXmSjeqy3JbhWfU4Ga8VOQOs6HaloLl/gMmO9ha36tHEm1LkcnuVEr71g7RCoayklEf1J8ZkSQwXZlY0Dz2hwmEFiSzNh7ln2aS+Lb0/sSmRZc','google'),(2,3,'[]','0:3:1NB7voYNlxdafUVttPbCcT6cqQ9t3YSIrz/2lpV+0P+ic+w27uDMxI7USU7YlYQz+5G0OfxNQw4Ivh34kD/PAOkHu5o1O0eWqm9/f3RpqFiX0EjUfGk0+Gb2tOXJiiZMsjWZAMgE52k/BAMBVKZiRYg5TOxMrinOhIEh2ZZW/WRGIOImpCeo2SnDogWoZaug4n+64iFmLLEX5gVAOWDbtRrOU0bIUhsPGHUfPiF7DiuWp60N6Ci2/XvpnqRtpfb0WPH4vsIpFL23RexgplWTU9yd01ZET9xWDJ0LqenS+/SivOoBmSyUCUdA2PhBRonW344AwOewNPN+KYnGzdv3/YNtEPUFJdpdtScaYEgb8B0+2hLmW6jsdxjp7MhvUoWopNjr/3Uw7D1/G7umDClAmQVLoLLj8ci2cA3cGxDhN/C5pforBgQRmjh3edF5F2zdKuttFLNWDCT2zkSUar4Baw68Hf4erkWQG7NjWdFEJHykfDeT6paTdPz+yIyKYXLI5/GbZCSECA==','google'),(3,1,'[]','0:3:gdazj9DHILhO9Xfd0SL6R6olsvYZIOC6q/upMJR2OeYuzxdV/Zdy8a1+ZygONKpvvFaIZWIgvlvCGLqWdXHrD/T6nT6wrCMRUxlh0TqLTWjGn/CIAMsc+rwyhnoqLWiA9C8f6kjN3caa8TEij0Y1n+is4BdT6Bw1g2BE9g5BUJHmeFtFbFVXDjMgiHGctjnqkA9B2FzqZZQ1/cUzol7mZbvSWN71H+poOFdCcvhf6WwYN4jmG/Gb90a+XWNtv6jKH0ZnIc5DNRb36zxFGOt3pmaDuu2tI4RQuJvfcu67iYlLv0KMQRKAt7GkI8ei3Uag7V+MUXVXwBEYr0W1bGBZmTm1hbLcubgtB/+ouJCjweapQp83ptK3eU/aJYoRNvyPAuLjKbj0NATRXi56tO6xuBecQ1UwIHanU96z1maKFYLtawMc3KtUKpqEczm4II/kuuLvPzqDXeSs/7XCYGa/qrmCGCadHwAFmRKpwHTaFacAOwpUNhOR4Gn12FSyh0x/8ghZ',NULL);
+INSERT INTO `tfa_user_config` VALUES (1,2,'[]','0:3:LWXi9qv1mFUSkqQP67whDtdSwuZU6NvnMxq3rCqlvzYEh4rT00d1VtKopeiAIxY7T5vl8tzWCO0hOrSwhHSIMYQpWFF4scLAIyT6owL3ADMyijIKWdO4antQ2yyzhEi5et4MXBwON3krg2yPbYI2iWk9ASv1jh28tYHMHWSS2wM7kfafe5VBe2zK1ja9Bk975zF9dMO0zsYYu9r9ikc6Jbai555IwGiyI6fTZPN/mK/Qv8xVBcMVekjpullHXqpCwI/VAkn5tHkH/Nh+8IrowEh6DE+jI1wqtB8HBxiMNUQFJSSBcCwKtVqAkwLoU9/0p5r3bS3F9nSgKinoc7T5la5irIfSSEgtblQNIXyXqhAuQRvJ/UYtkd8nttUnsem/ESk/q05cJo/FAi6uy4JmayQXmSjeqy3JbhWfU4Ga8VOQOs6HaloLl/gMmO9ha36tHEm1LkcnuVEr71g7RCoayklEf1J8ZkSQwXZlY0Dz2hwmEFiSzNh7ln2aS+Lb0/sSmRZc','google'),(2,3,'[]','0:3:dX5OV9GHIIBwvtz+Bd+GScuVn6JHWnFlTBPHUzuNrYgeWt9rPoKTJFHxaLek1mc8N2p7y8AkgoPp5HRP1uVy5Tke7HNVWfcipCn0CNlpODSmT3TpN2tMOkrqLtbjOhDpa0GuA16CPiLfCCfcCCg9X+9682bu374llOSte0GUaYup3TrvnKtm4xl/mAfe68HPGXrMfD+liuXAPMdAK0JivxplXWLn+fQLrnU2DofteOiIdPODVOVCpjhwxsCv2cVy2fC0EMv9CMXoHSPd93KgJ7S++mRBSx6GbZzC3He5TUra/ZHSyrmFh63GOtcF2MzYS0unZSOaeT1jtT7tOfKOzAktLirYzNo6GrRHSQlTSJrC7DY1CBvjlsifOTENvoPG0oU4UzDLHJOd81UIXnC1OMriP+0xD/3bgpT3Hge7dgDqPBbE8qjBWTeR/b9BcwJuo5ukCy4dy30cjfpVC9dEkwoapFWM0cmEgEy1genBY9HTEA+TmsbVPsmUJz+UxYszxCmDQS/Ovw==','google'),(3,1,'[]','0:3:gdazj9DHILhO9Xfd0SL6R6olsvYZIOC6q/upMJR2OeYuzxdV/Zdy8a1+ZygONKpvvFaIZWIgvlvCGLqWdXHrD/T6nT6wrCMRUxlh0TqLTWjGn/CIAMsc+rwyhnoqLWiA9C8f6kjN3caa8TEij0Y1n+is4BdT6Bw1g2BE9g5BUJHmeFtFbFVXDjMgiHGctjnqkA9B2FzqZZQ1/cUzol7mZbvSWN71H+poOFdCcvhf6WwYN4jmG/Gb90a+XWNtv6jKH0ZnIc5DNRb36zxFGOt3pmaDuu2tI4RQuJvfcu67iYlLv0KMQRKAt7GkI8ei3Uag7V+MUXVXwBEYr0W1bGBZmTm1hbLcubgtB/+ouJCjweapQp83ptK3eU/aJYoRNvyPAuLjKbj0NATRXi56tO6xuBecQ1UwIHanU96z1maKFYLtawMc3KtUKpqEczm4II/kuuLvPzqDXeSs/7XCYGa/qrmCGCadHwAFmRKpwHTaFacAOwpUNhOR4Gn12FSyh0x/8ghZ',NULL);
 /*!40000 ALTER TABLE `tfa_user_config` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -12949,7 +12953,7 @@ CREATE TABLE `url_rewrite` (
   KEY `URL_REWRITE_TARGET_PATH` (`target_path`),
   KEY `URL_REWRITE_STORE_ID_ENTITY_ID` (`store_id`,`entity_id`),
   KEY `URL_REWRITE_ENTITY_ID` (`entity_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COMMENT='Url Rewrites';
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8 COMMENT='Url Rewrites';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -12958,7 +12962,7 @@ CREATE TABLE `url_rewrite` (
 
 LOCK TABLES `url_rewrite` WRITE;
 /*!40000 ALTER TABLE `url_rewrite` DISABLE KEYS */;
-INSERT INTO `url_rewrite` VALUES (1,'cms-page',1,'no-route','cms/page/view/page_id/1',0,1,NULL,1,NULL),(2,'cms-page',2,'home','cms/page/view/page_id/2',0,1,NULL,1,NULL),(3,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,1,NULL,1,NULL),(4,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,1,NULL,1,NULL),(5,'cms-page',1,'no-route','cms/page/view/page_id/1',0,2,NULL,1,NULL),(6,'cms-page',2,'home','cms/page/view/page_id/2',0,2,NULL,1,NULL),(7,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,2,NULL,1,NULL),(8,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,2,NULL,1,NULL),(9,'category',3,'test-subcategory.html','catalog/category/view/id/3',0,2,NULL,1,NULL),(10,'category',3,'test-subcategory.html','catalog/category/view/id/3',0,1,NULL,1,NULL),(23,'cms-page',1,'no-route','cms/page/view/page_id/1',0,3,NULL,1,NULL),(24,'cms-page',2,'home','cms/page/view/page_id/2',0,3,NULL,1,NULL),(25,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,3,NULL,1,NULL),(26,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,3,NULL,1,NULL),(27,'cms-page',1,'no-route','cms/page/view/page_id/1',0,4,NULL,1,NULL),(28,'cms-page',2,'home','cms/page/view/page_id/2',0,4,NULL,1,NULL),(29,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,4,NULL,1,NULL),(30,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,4,NULL,1,NULL),(31,'cms-page',1,'no-route','cms/page/view/page_id/1',0,5,NULL,1,NULL),(32,'cms-page',2,'home','cms/page/view/page_id/2',0,5,NULL,1,NULL),(33,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,5,NULL,1,NULL),(34,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,5,NULL,1,NULL),(35,'cms-page',1,'no-route','cms/page/view/page_id/1',0,6,NULL,1,NULL),(36,'cms-page',2,'home','cms/page/view/page_id/2',0,6,NULL,1,NULL),(37,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,6,NULL,1,NULL),(38,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,6,NULL,1,NULL),(39,'category',6,'tea.html','catalog/category/view/id/6',0,6,NULL,1,NULL),(40,'category',6,'tea.html','catalog/category/view/id/6',0,5,NULL,1,NULL),(41,'category',7,'kaffee.html','catalog/category/view/id/7',0,4,NULL,1,NULL),(42,'category',7,'kaffee.html','catalog/category/view/id/7',0,3,NULL,1,NULL),(43,'product',5,'product-1.html','catalog/product/view/id/5',0,2,NULL,1,NULL),(44,'product',5,'test-subcategory/product-1.html','catalog/product/view/id/5/category/3',0,2,NULL,1,'{\"category_id\":\"3\"}'),(45,'product',5,'product-1.html','catalog/product/view/id/5',0,1,NULL,1,NULL),(46,'product',5,'test-subcategory/product-1.html','catalog/product/view/id/5/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(47,'product',6,'product-2.html','catalog/product/view/id/6',0,2,NULL,1,NULL),(48,'product',6,'test-subcategory/product-2.html','catalog/product/view/id/6/category/3',0,2,NULL,1,'{\"category_id\":\"3\"}'),(49,'product',6,'product-2.html','catalog/product/view/id/6',0,1,NULL,1,NULL),(50,'product',6,'test-subcategory/product-2.html','catalog/product/view/id/6/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(51,'product',12,'green-tea.html','catalog/product/view/id/12',0,2,NULL,1,NULL),(52,'product',12,'green-tea.html','catalog/product/view/id/12',0,1,NULL,1,NULL),(57,'product',5,'product-1.html','catalog/product/view/id/5',0,6,NULL,1,NULL),(58,'product',12,'green-tea.html','catalog/product/view/id/12',0,6,NULL,1,NULL),(59,'product',5,'product-1.html','catalog/product/view/id/5',0,5,NULL,1,NULL),(60,'product',12,'green-tea.html','catalog/product/view/id/12',0,5,NULL,1,NULL),(61,'product',10,'green-tea-zeleny.html','catalog/product/view/id/10',0,6,NULL,1,NULL),(62,'product',10,'tea/green-tea-zeleny.html','catalog/product/view/id/10/category/6',0,6,NULL,1,'{\"category_id\":\"6\"}'),(63,'product',10,'green-tea-zeleny.html','catalog/product/view/id/10',0,5,NULL,1,NULL),(64,'product',10,'tea/green-tea-zeleny.html','catalog/product/view/id/10/category/6',0,5,NULL,1,'{\"category_id\":\"6\"}'),(65,'product',11,'red-tea.html','catalog/product/view/id/11',0,6,NULL,1,NULL),(66,'product',11,'tea/red-tea.html','catalog/product/view/id/11/category/6',0,6,NULL,1,'{\"category_id\":\"6\"}'),(67,'product',11,'red-tea.html','catalog/product/view/id/11',0,5,NULL,1,NULL),(68,'product',11,'tea/red-tea.html','catalog/product/view/id/11/category/6',0,5,NULL,1,'{\"category_id\":\"6\"}');
+INSERT INTO `url_rewrite` VALUES (1,'cms-page',1,'no-route','cms/page/view/page_id/1',0,1,NULL,1,NULL),(2,'cms-page',2,'home','cms/page/view/page_id/2',0,1,NULL,1,NULL),(3,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,1,NULL,1,NULL),(4,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,1,NULL,1,NULL),(5,'cms-page',1,'no-route','cms/page/view/page_id/1',0,2,NULL,1,NULL),(6,'cms-page',2,'home','cms/page/view/page_id/2',0,2,NULL,1,NULL),(7,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,2,NULL,1,NULL),(8,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,2,NULL,1,NULL),(9,'category',3,'test-subcategory.html','catalog/category/view/id/3',0,2,NULL,1,NULL),(10,'category',3,'test-subcategory.html','catalog/category/view/id/3',0,1,NULL,1,NULL),(23,'cms-page',1,'no-route','cms/page/view/page_id/1',0,3,NULL,1,NULL),(24,'cms-page',2,'home','cms/page/view/page_id/2',0,3,NULL,1,NULL),(25,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,3,NULL,1,NULL),(26,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,3,NULL,1,NULL),(27,'cms-page',1,'no-route','cms/page/view/page_id/1',0,4,NULL,1,NULL),(28,'cms-page',2,'home','cms/page/view/page_id/2',0,4,NULL,1,NULL),(29,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,4,NULL,1,NULL),(30,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,4,NULL,1,NULL),(31,'cms-page',1,'no-route','cms/page/view/page_id/1',0,5,NULL,1,NULL),(32,'cms-page',2,'home','cms/page/view/page_id/2',0,5,NULL,1,NULL),(33,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,5,NULL,1,NULL),(34,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,5,NULL,1,NULL),(35,'cms-page',1,'no-route','cms/page/view/page_id/1',0,6,NULL,1,NULL),(36,'cms-page',2,'home','cms/page/view/page_id/2',0,6,NULL,1,NULL),(37,'cms-page',3,'enable-cookies','cms/page/view/page_id/3',0,6,NULL,1,NULL),(38,'cms-page',4,'privacy-policy-cookie-restriction-mode','cms/page/view/page_id/4',0,6,NULL,1,NULL),(39,'category',6,'tea.html','catalog/category/view/id/6',0,6,NULL,1,NULL),(40,'category',6,'tea.html','catalog/category/view/id/6',0,5,NULL,1,NULL),(41,'category',7,'kaffee.html','catalog/category/view/id/7',0,4,NULL,1,NULL),(42,'category',7,'kaffee.html','catalog/category/view/id/7',0,3,NULL,1,NULL),(43,'product',5,'product-1.html','catalog/product/view/id/5',0,2,NULL,1,NULL),(44,'product',5,'test-subcategory/product-1.html','catalog/product/view/id/5/category/3',0,2,NULL,1,'{\"category_id\":\"3\"}'),(45,'product',5,'product-1.html','catalog/product/view/id/5',0,1,NULL,1,NULL),(46,'product',5,'test-subcategory/product-1.html','catalog/product/view/id/5/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(47,'product',6,'product-2.html','catalog/product/view/id/6',0,2,NULL,1,NULL),(48,'product',6,'test-subcategory/product-2.html','catalog/product/view/id/6/category/3',0,2,NULL,1,'{\"category_id\":\"3\"}'),(49,'product',6,'product-2.html','catalog/product/view/id/6',0,1,NULL,1,NULL),(50,'product',6,'test-subcategory/product-2.html','catalog/product/view/id/6/category/3',0,1,NULL,1,'{\"category_id\":\"3\"}'),(51,'product',12,'green-tea.html','catalog/product/view/id/12',0,2,NULL,1,NULL),(52,'product',12,'green-tea.html','catalog/product/view/id/12',0,1,NULL,1,NULL),(57,'product',5,'product-1.html','catalog/product/view/id/5',0,6,NULL,1,NULL),(58,'product',12,'green-tea.html','catalog/product/view/id/12',0,6,NULL,1,NULL),(59,'product',5,'product-1.html','catalog/product/view/id/5',0,5,NULL,1,NULL),(60,'product',12,'green-tea.html','catalog/product/view/id/12',0,5,NULL,1,NULL),(61,'product',10,'green-tea-zeleny.html','catalog/product/view/id/10',0,6,NULL,1,NULL),(62,'product',10,'tea/green-tea-zeleny.html','catalog/product/view/id/10/category/6',0,6,NULL,1,'{\"category_id\":\"6\"}'),(63,'product',10,'green-tea-zeleny.html','catalog/product/view/id/10',0,5,NULL,1,NULL),(64,'product',10,'tea/green-tea-zeleny.html','catalog/product/view/id/10/category/6',0,5,NULL,1,'{\"category_id\":\"6\"}'),(65,'product',11,'red-tea.html','catalog/product/view/id/11',0,6,NULL,1,NULL),(66,'product',11,'tea/red-tea.html','catalog/product/view/id/11/category/6',0,6,NULL,1,'{\"category_id\":\"6\"}'),(67,'product',11,'red-tea.html','catalog/product/view/id/11',0,5,NULL,1,NULL),(68,'product',11,'tea/red-tea.html','catalog/product/view/id/11/category/6',0,5,NULL,1,'{\"category_id\":\"6\"}'),(69,'product',13,'nescafe.html','catalog/product/view/id/13',0,4,NULL,1,NULL),(70,'product',13,'kaffee/nescafe.html','catalog/product/view/id/13/category/7',0,4,NULL,1,'{\"category_id\":\"7\"}'),(71,'product',13,'nescafe.html','catalog/product/view/id/13',0,3,NULL,1,NULL),(72,'product',13,'kaffee/nescafe.html','catalog/product/view/id/13/category/7',0,3,NULL,1,'{\"category_id\":\"7\"}'),(77,'product',14,'jacobs.html','catalog/product/view/id/14',0,4,NULL,1,NULL),(78,'product',14,'kaffee/jacobs.html','catalog/product/view/id/14/category/7',0,4,NULL,1,'{\"category_id\":\"7\"}'),(79,'product',14,'nescafe-1.html','jacobs.html',301,4,NULL,0,'[]'),(80,'product',14,'kaffee/nescafe-1.html','kaffee/jacobs.html',301,4,NULL,0,'{\"category_id\":\"7\"}'),(81,'product',14,'jacobs.html','catalog/product/view/id/14',0,3,NULL,1,NULL),(82,'product',14,'kaffee/jacobs.html','catalog/product/view/id/14/category/7',0,3,NULL,1,'{\"category_id\":\"7\"}'),(83,'product',14,'nescafe-1.html','jacobs.html',301,3,NULL,0,'[]'),(84,'product',14,'kaffee/nescafe-1.html','kaffee/jacobs.html',301,3,NULL,0,'{\"category_id\":\"7\"}');
 /*!40000 ALTER TABLE `url_rewrite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -13714,4 +13718,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-13 11:02:13
+-- Dump completed on 2020-08-13 12:20:31
