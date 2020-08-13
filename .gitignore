@@ -69,5 +69,6 @@ atlassian*
 .github
 .editorconfig
 
-.ddev
+.ddev/*
 !.ddev/config.yaml
+!.ddev/docker-compose.elasticsearch.yaml
