@@ -42,3 +42,6 @@ Command: `php bin/magento setup:static-content:deploy`
 Command: `php bin/magento indexer:reindex`
 
 Clear cache and try again.
+
+##Disabling 2 Factor Authentication
+Command: `php bin/magento module:disable Magento_TwoFactorAuth && bin/magento cache:flush`
