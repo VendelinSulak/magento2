@@ -298,7 +298,7 @@ return [
         'Mageplaza_Core' => 0,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
-        'SendCloud_SendCloud' => 0,
+        'SendCloud_SendCloud' => 1,
         'Stripeofficial_Core' => 1,
         'Stripeofficial_BANCONTACT' => 1,
         'Stripeofficial_Alipay' => 1,
