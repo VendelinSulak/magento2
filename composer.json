@@ -14,7 +14,9 @@
         "avada/module-proofo": "^1.0",
         "magento/composer-root-update-plugin": "~1.0",
         "magento/product-community-edition": "2.4.0",
-        "mageplaza/magento-2-german-language-pack": "dev-master"
+        "mageplaza/magento-2-german-language-pack": "dev-master",
+        "stripe/stripe-php": "^7.49",
+        "stripeofficial/stripe-payments": "^2.0"
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",
@@ -39,7 +41,8 @@
             "Magento\\Framework\\": "lib/internal/Magento/Framework/",
             "Magento\\Setup\\": "setup/src/Magento/Setup/",
             "Magento\\": "app/code/Magento/",
-            "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/"
+            "Zend\\Mvc\\Controller\\": "setup/src/Zend/Mvc/Controller/",
+            "Stripe\\" : "lib/internal/Stripe/"
         },
         "psr-0": {
             "": [

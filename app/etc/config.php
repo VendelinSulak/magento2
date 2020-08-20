@@ -298,6 +298,7 @@ return [
         'Mageplaza_Core' => 0,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
+        'StripeIntegration_Payments' => 1,
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,

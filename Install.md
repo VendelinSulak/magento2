@@ -45,3 +45,11 @@ Clear cache and try again.
 
 ##Disabling 2 Factor Authentication
 Command: `php bin/magento module:disable Magento_TwoFactorAuth && bin/magento cache:flush`
+
+##URL Rewrites
+1.Marketing->SEO & Search -> URL Rewrites
+
+##Multiple Currencies
+1.Stores -> Configuration -> Currency Setup -> choose Allowed Currencies you want to display
+
+2.Setup currency rates: Stores -> Currency Rates -> Set value for all parameters
