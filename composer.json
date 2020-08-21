@@ -16,8 +16,7 @@
         "magento/product-community-edition": "2.4.0",
         "mageplaza/magento-2-german-language-pack": "dev-master",
         "sendcloud/sendcloud": "^1.4",
-        "stripe/stripe-php": "^7.49",
-        "stripeofficial/stripe-payments": "^2.0"
+        "stripe/stripe-php": "^7"
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.2.0",
