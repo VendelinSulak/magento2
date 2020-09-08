@@ -53,3 +53,18 @@ Command: `php bin/magento module:disable Magento_TwoFactorAuth && bin/magento ca
 1.Stores -> Configuration -> Currency Setup -> choose Allowed Currencies you want to display
 
 2.Setup currency rates: Stores -> Currency Rates -> Set value for all parameters
+
+##Custom Email Template
+1.Marketing -> Communications -> Email Templates -> Add New Template
+
+2.Command: `php bin/magento cache:flush && bin/magento index:reindex`
+
+##Set New Custom Email Template
+1.Stores -> Configuration -> Sales -> Sales Emails -> Order (or whatever) -> New Order Confirmaton Template -> Set New Email Template
+
+##Multi language Email Template
+1.Stores -> Configuration -> Change Scope To Correct Store View
+
+2.Stores -> Configuration -> Sales -> Sales Emails -> Order (or whatever) -> New Order Confirmaton Template -> Set New Email Template
+
+
