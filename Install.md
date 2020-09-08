@@ -59,6 +59,8 @@ Command: `php bin/magento module:disable Magento_TwoFactorAuth && bin/magento ca
 
 2.Command: `php bin/magento cache:flush && bin/magento index:reindex`
 
+https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/templates/template-email.html
+
 ##Set New Custom Email Template
 1.Stores -> Configuration -> Sales -> Sales Emails -> Order (or whatever) -> New Order Confirmaton Template -> Set New Email Template
 
