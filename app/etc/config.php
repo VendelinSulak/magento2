@@ -303,6 +303,7 @@ return [
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
+        'Vienna_Springer' => 0,
         'Yotpo_Yotpo' => 1
     ]
 ];

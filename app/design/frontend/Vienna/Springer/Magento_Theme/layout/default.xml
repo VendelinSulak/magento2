@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="page_top_after_nav" label="Page top After Navigation Container" htmlTag="div" htmlClass="hero banner after-navigation" before="main.content" />
+        </referenceContainer>
+
+        <referenceContainer name="header.container">
+            <container name="springer.header.links" label="Springer Header Links Container" htmlTag="div" htmlClass="springer-header-links" before="header-wrapper">
+                <container name="springer.header.links.left" htmlTag="div" htmlClass="springer-links-left">
+                    <block class="Magento\Customer\Block\Account\Navigation" name="customer_account_navigation" before="-">
+                        <arguments>
+                            <argument name="css_class" xsi:type="string">nav items</argument>
+                        </arguments>
+                        <block class="Magento\Customer\Block\Account\SortLinkInterface" name="customer-account-navigation-account-link">
+                            <arguments>
+                                <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                                <argument name="path" xsi:type="string">customer/account</argument>
+                                <argument name="sortOrder" xsi:type="number">250</argument>
+                            </arguments>
+                        </block>
+                    </block>
+                    <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="logo" template="Magento_Checkout::cart/minicart.phtml" />
+                </container>
+
+                <container name="springer.header.links.right" htmlTag="div" htmlClass="springer-links-right">
+                    <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" />
+                </container>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="header.panel" remove="true" />
+<!--        <referenceBlock name="top.search" remove="true" />-->
+    </body>
+</page>

@@ -43,6 +43,10 @@ switch ($_SERVER['HTTP_HOST']) {
         $params[\Magento\Store\Model\StoreManager::PARAM_RUN_CODE] = 'coffee';
         $params[\Magento\Store\Model\StoreManager::PARAM_RUN_TYPE] = 'website';
         break;
+    case 'springer.ddev.site':
+        $params[\Magento\Store\Model\StoreManager::PARAM_RUN_CODE] = 'springer';
+        $params[\Magento\Store\Model\StoreManager::PARAM_RUN_TYPE] = 'website';
+        break;
 
     default:
         $params[\Magento\Store\Model\StoreManager::PARAM_RUN_CODE] = 'base';

@@ -9,6 +9,7 @@ xdebug_enabled: false
 additional_hostnames:
     - tea
     - coffee
+    - springer
     - admin
 additional_fqdns: []
 nfs_mount_enabled: true

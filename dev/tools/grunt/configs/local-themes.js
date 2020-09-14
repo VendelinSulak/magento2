@@ -45,11 +45,11 @@ module.exports = {
         area: 'frontend',
         name: 'Vienna/Springer',
         locale: 'en_US',
-        files: [
-            'css/styles-m', //path to root source file
-            'css/styles-l'
-        ],
-        dsl: 'less'
+            files: [
+                'css/styles-m', //path to root source file
+                'css/styles-l'
+            ],
+            dsl: 'less'
     },
     backend: {
         area: 'adminhtml',
